@@ -18,9 +18,9 @@ before_install:
 
 install:
   - pip install cython tox codecov
+  - uname -m
 
 script:
-  - uname -m
   - tox -e py
 
 after_success:
