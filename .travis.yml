@@ -1,15 +1,11 @@
 language: python
 
-arch:
-  - arm64
-  - amd64
 matrix:
   include:
-    - python: 3.6
-      script: tox -e coverage
-    - python: 3.7
-      script: tox -e py37
     - python: 3.8
+      script: tox -e py38
+    - python: 3.8
+      arch: arm64
       script: tox -e py38
 
 before_install:
